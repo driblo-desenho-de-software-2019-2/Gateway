@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  gateway:
+    container_name: gateway
+    build: .
+    command: bash -c "yarn && yarn dev"
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/usr/app
