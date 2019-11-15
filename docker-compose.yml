@@ -9,3 +9,9 @@ services:
       - "8000:8000"
     volumes:
       - .:/usr/app
+    networks:
+      - api-backend
+networks:
+  api-backend:
+    external:
+      name: api-backend    
