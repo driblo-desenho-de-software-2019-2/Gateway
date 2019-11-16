@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+// Pelada
 export async function createPelada(req, res) {
     const response = await axios.post(`http://driblo:8001/pelada`, req.body);
     return res.json(response.data);
@@ -20,4 +21,10 @@ export async function updatePelada(req, res) {
 export async function deletePelada(req, res) {
     const { peladaId } = req.params;
     
+}
+
+// User
+export async function createUser(req, res) {
+    const response = await axios.post(`http://driblo:8001/user`, req.body);
+    return res.json(response.data);
 }
