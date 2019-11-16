@@ -24,4 +24,7 @@ routes.delete('/api/rule/:ruleId', Driblo.deleteRule);
 // Goal
 routes.post('/api/goal', Driblo.createGoal);
 
+// UserTeam
+routes.post('/api/userteam', Driblo.createUserTeam);
+
 export default routes;
