@@ -18,5 +18,6 @@ routes.delete('/api/user/:userId', Driblo.deleteUser);
 // Rule
 routes.post('/api/rule', Driblo.createRule);
 routes.get('/api/rule/:ruleId', Driblo.getRule);
+routes.put('/api/rule/:ruleId', Driblo.updateRule);
 
 export default routes;
