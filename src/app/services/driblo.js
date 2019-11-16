@@ -34,3 +34,9 @@ export async function getUser(req, res) {
     const response = await axios.get(`http://driblo:8001/user/${userId}`);
     return res.json(response.data);
 }
+
+export async function updateUser(req, res) {
+    const { userId } = req.params;
+    const response = await axios.get(`http://driblo:8001/user/${userId}`, req.body);
+    return res.json(response.data);
+}
