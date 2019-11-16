@@ -3,15 +3,8 @@ import * as Driblo from './app/services/driblo'
 
 const routes = new Router();
 
-routes.get('/api/pelada/:peladaId', Driblo.getPelada);
 routes.post('/api/pelada', Driblo.createPelada);
-// update
-
-
-
-
-
-
-
+routes.get('/api/pelada/:peladaId', Driblo.getPelada);
+routes.put('/api/pelada/:peladaId', Driblo.updatePelada);
 
 export default routes;
