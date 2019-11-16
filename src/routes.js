@@ -26,6 +26,9 @@ routes.post('/api/goal', Driblo.createGoal);
 
 // UserTeam
 routes.post('/api/userteam', Driblo.createUserTeam);
-routes.delete('/api/userteam:userteamId', Driblo.deleteUserTeam);
+routes.delete('/api/userteam/:userteamId', Driblo.deleteUserTeam);
+
+// Team
+routes.post('/api/team', Driblo.createTeam);
 
 export default routes;

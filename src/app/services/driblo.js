@@ -85,3 +85,9 @@ export async function deleteUserTeam(req, res) {
     const { userteamId } = req.params;
     
 }
+
+// Team
+export async function createTeam(req, res) {
+    const response = await axios.post(`http://driblo:8001/team`, req.body);
+    return res.json(response.data);
+}
