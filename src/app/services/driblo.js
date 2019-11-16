@@ -45,3 +45,9 @@ export async function deleteUser(req, res) {
     const { userId } = req.params;
     
 }
+
+// Rules
+export async function createRule(req, res) {
+    const response = await axios.post(`http://driblo:8001/rule`, req.body);
+    return res.json(response.data);
+}
