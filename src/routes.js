@@ -13,5 +13,6 @@ routes.delete('/api/pelada/:peladaId', Driblo.deletePelada);
 routes.post('/api/user', Driblo.createUser);
 routes.get('/api/user/:userId', Driblo.getUser);
 routes.put('/api/user/:userId', Driblo.updateUser);
+routes.delete('/api/user/:userId', Driblo.deleteUser);
 
 export default routes;
