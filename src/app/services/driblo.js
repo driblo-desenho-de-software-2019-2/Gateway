@@ -46,8 +46,14 @@ export async function deleteUser(req, res) {
     
 }
 
-// Rules
+// Rule
 export async function createRule(req, res) {
     const response = await axios.post(`http://driblo:8001/rule`, req.body);
+    return res.json(response.data);
+}
+
+export async function getRule(req, res) {
+    const { ruleId } = req.params;
+    const response = await axios.get(`http://driblo:8001/rule/${ruleId}`);
     return res.json(response.data);
 }
