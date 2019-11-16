@@ -21,4 +21,7 @@ routes.get('/api/rule/:ruleId', Driblo.getRule);
 routes.put('/api/rule/:ruleId', Driblo.updateRule);
 routes.delete('/api/rule/:ruleId', Driblo.deleteRule);
 
+// Goal
+routes.post('/api/goal', Driblo.createGoal);
+
 export default routes;

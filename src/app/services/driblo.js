@@ -68,3 +68,9 @@ export async function deleteRule(req, res) {
     const { ruleId } = req.params;
     
 }
+
+// Goal
+export async function createGoal(req, res) {
+    const response = await axios.post(`http://driblo:8001/goal`, req.body);
+    return res.json(response.data);
+}
