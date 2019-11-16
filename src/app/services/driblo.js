@@ -63,3 +63,8 @@ export async function updateRule(req, res) {
     const response = await axios.get(`http://driblo:8001/rule/${ruleId}`, req.body);
     return res.json(response.data);
 }
+
+export async function deleteRule(req, res) {
+    const { ruleId } = req.params;
+    
+}
