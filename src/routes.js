@@ -31,4 +31,8 @@ routes.delete('/api/userteam/:userteamId', Driblo.deleteUserTeam);
 // Team
 routes.post('/api/team', Driblo.createTeam);
 
+// PeladaUser
+routes.post('/api/peladauser', Driblo.createPeladaUser);
+routes.delete('/api/peladauser/:peladauserId', Driblo.deletePeladaUser);
+
 export default routes;

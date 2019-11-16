@@ -91,3 +91,14 @@ export async function createTeam(req, res) {
     const response = await axios.post(`http://driblo:8001/team`, req.body);
     return res.json(response.data);
 }
+
+// PeladaUser
+export async function createPeladaUser(req, res) {
+    const response = await axios.post(`http://driblo:8001/peladauser`, req.body);
+    return res.json(response.data);
+}
+
+export async function deletePeladaUser(req, res) {
+    const { peladauserId } = req.params;
+    
+}
