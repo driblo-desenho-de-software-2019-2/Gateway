@@ -2,37 +2,65 @@ import axios from 'axios';
 
 // Pelada
 export async function createPelada(req, res) {
-    const response = await axios.post(`http://driblo:8001/pelada`, req.body);
+    try{
+        const response = await axios.post(`http://driblo:8001/pelada`, req.body);
+    }catch(error){
+        return res.status(400).json({message:error.message});
+    }
+
     return res.json(response.data);
 }
 
 export async function getPelada(req, res) {
     const { peladaId } = req.params;
-    const response = await axios.get(`http://driblo:8001/pelada/${peladaId}`);
+    try{
+        const response = await axios.get(`http://driblo:8001/pelada/${peladaId}`);
+    }catch(error){
+        return res.status(400).json({message:error.message});
+    }
     return res.json(response.data);
 }
 
 export async function updatePelada(req, res) {
     const { peladaId } = req.params;
-    const response = await axios.put(`http://driblo:8001/pelada/${peladaId}`, req.body);
+    try{
+        const response = await axios.put(`http://driblo:8001/pelada/${peladaId}`, req.body);
+    }catch(error){
+        return res.status(400).json({message:error.message});
+    }
     return res.json(response.data);
 }
 
 export async function deletePelada(req, res) {
     const { peladaId } = req.params;
-    const response = await axios.delete(`http://driblo:8001/pelada/${peladaId}`);
+    try{
+        const response = await axios.delete(`http://driblo:8001/pelada/${peladaId}`);        
+    }catch(error){
+        return res.status(400).json({message:error.message});
+    }
+
     return res.json(response.data);    
 }
 
 // User
 export async function createUser(req, res) {
-    const response = await axios.post(`http://driblo:8001/user`, req.body);
+    try{
+        const response = await axios.post(`http://driblo:8001/user`, req.body);
+    }catch(error){
+        return res.status(400).json({message:error.message});
+    }
+    
     return res.json(response.data);
 }
 
 export async function getUser(req, res) {
     const { userId } = req.params;
-    const response = await axios.get(`http://driblo:8001/user/${userId}`);
+    try{
+        const response = await axios.get(`http://driblo:8001/user/${userId}`);        
+    }catch(error){
+        return res.status(400).json({message:error.message});
+    }
+
     return res.json(response.data);
 }
 

@@ -17,7 +17,7 @@ routes.delete('/api/user/:userId', Driblo.deleteUser);
 
 // Rule
 routes.post('/api/rule', Driblo.createRule);
-routes.get('/api/pelada/:peladaId/rules', Driblo.getRule);
+routes.get('/api/pelada/:peladaId/rule', Driblo.getRule);
 routes.put('/api/rule/:ruleId', Driblo.updateRule);
 routes.delete('/api/rule/:ruleId', Driblo.deleteRule);
 
@@ -36,7 +36,6 @@ routes.post('/api/peladauser', Driblo.addUserPelada);
 routes.get('/api/pelada/:id/users-presents', Driblo.listPlayersPresent);
 routes.get('/api/pelada/:id/highlights-of-game', Driblo.highlightsOfGame);
 routes.put('/api/users/:userId/pelada/:peladaId', Driblo.togglePresence);
-routes.delete('/api/peladauser/:peladauserId', Driblo.removeUserPelada);
 routes.delete('/api/users/:userId/pelada/:peladaId', Driblo.removeUserPelada);
 
 // Photo pelada
