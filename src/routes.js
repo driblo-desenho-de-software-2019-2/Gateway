@@ -17,7 +17,7 @@ routes.delete('/api/user/:userId', Driblo.deleteUser);
 
 // Rule
 routes.post('/api/rule', Driblo.createRule);
-routes.get('/api/rule/:ruleId', Driblo.getRule);
+routes.get('/api/pelada/:peladaId/rules', Driblo.getRule);
 routes.put('/api/rule/:ruleId', Driblo.updateRule);
 routes.delete('/api/rule/:ruleId', Driblo.deleteRule);
 
@@ -25,14 +25,21 @@ routes.delete('/api/rule/:ruleId', Driblo.deleteRule);
 routes.post('/api/goal', Driblo.createGoal);
 
 // UserTeam
-routes.post('/api/userteam', Driblo.createUserTeam);
-routes.delete('/api/userteam/:userteamId', Driblo.deleteUserTeam);
+routes.post('/api/userteam', Driblo.addUserTeam);
+routes.delete('/api/users/:userId/team/:teamId', Driblo.removeUserTeam);
 
 // Team
 routes.post('/api/team', Driblo.createTeam);
 
 // PeladaUser
-routes.post('/api/peladauser', Driblo.createPeladaUser);
-routes.delete('/api/peladauser/:peladauserId', Driblo.deletePeladaUser);
+routes.post('/api/peladauser', Driblo.addUserPelada);
+routes.get('/api/pelada/:id/users-presents', Driblo.listPlayersPresent);
+routes.get('/api/pelada/:id/highlights-of-game', Driblo.highlightsOfGame);
+routes.put('/api/users/:userId/pelada/:peladaId', Driblo.togglePresence);
+routes.delete('/api/peladauser/:peladauserId', Driblo.removeUserPelada);
+routes.delete('/api/users/:userId/pelada/:peladaId', Driblo.removeUserPelada);
+
+// Photo pelada
+routes.post('/files', Driblo.insertPhotoPelada);
 
 export default routes;
