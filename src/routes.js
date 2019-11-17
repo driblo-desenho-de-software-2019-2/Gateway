@@ -1,11 +1,11 @@
 import {Router} from 'express';
 import * as Driblo from './app/services/driblo'
-
+import authUser from './app/middlewares/auth'
 const routes = new Router();
 
 // Pelada
 routes.post('/api/pelada', Driblo.createPelada);
-routes.get('/api/pelada/:peladaId', Driblo.getPelada);
+routes.get('/api/pelada/:peladaId', authUser, Driblo.getPelada);
 routes.put('/api/pelada/:peladaId', Driblo.updatePelada);
 routes.delete('/api/pelada/:peladaId', Driblo.deletePelada);
 
